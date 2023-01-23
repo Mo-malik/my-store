@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
-import { AppRoutingModuleModule } from './modules/app-routing-module/app-routing-module';
+import { AppRoutingModule } from './modules/app-routing-module/app-routing-module';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -10,7 +10,7 @@ describe('AppComponent', () => {
         AppComponent
       ],
       imports: [
-        AppRoutingModuleModule,
+        AppRoutingModule,
         HttpClientModule 
       ],
     }).compileComponents();
