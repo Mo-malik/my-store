@@ -12,6 +12,7 @@ import { MatTableModule} from '@angular/material/table';
 import { MatCardModule} from '@angular/material/card';
 import { MatIconModule} from '@angular/material/icon';
 import { MatSelectModule} from '@angular/material/select';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
@@ -33,7 +34,8 @@ import { FlexLayoutModule} from '@angular/flex-layout';
     MatSelectModule,
     MatBadgeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule
   
   ]
 })

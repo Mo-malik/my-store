@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -10,6 +11,8 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductsComponent implements OnInit {
   selected=1;
   item=0;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
   add(){
     this.item++;
     alert(this.item)
@@ -22,7 +25,8 @@ export class ProductsComponent implements OnInit {
 
   }
 products:Product[]=[];
-  constructor(private productService:ProductService){
+  constructor(private productService:ProductService,
+    private _snackBar: MatSnackBar){
 
   }
   ngOnInit(): void {
@@ -32,7 +36,13 @@ this.productService.getProducts().subscribe((data)=>{
 })
   }
 
-
+  alertUser(product:Product){
+    this._snackBar.open(product.name + ' Added To Cart','close', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+      duration:2*1000
+    });
+  }
 
 
 }

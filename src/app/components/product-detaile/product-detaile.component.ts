@@ -14,20 +14,20 @@ export class ProductDetaileComponent  implements OnInit{
   product:Product;
 
 
-
-  constructor(private roter:ActivatedRoute , private productServis:ProductService,private CartService:CartService){
+  constructor(private roter:ActivatedRoute , private productService:ProductService,private CartService:CartService){
 
   }
   ngOnInit(): void {
     this.id=this.roter.snapshot.paramMap.get('id');
     console.log(this.id);
 
-    this.productServis.getProducts().subscribe((data)=>{
+    this.productService.getProducts().subscribe((data)=>{
       this.product=data.filter(product=>{return product.id==this.id})[0]
+      this.productService.checkProductCart(this.product)
+
       console.log(this.product);
       
     })
-    
   }
   add(product:Product){
     this.CartService.add(product)
@@ -38,4 +38,6 @@ export class ProductDetaileComponent  implements OnInit{
     this.CartService.remove(product);
 
       }
+
+
 }
