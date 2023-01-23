@@ -13,4 +13,4 @@ import { Routes } from './routes';
   ],
   exports:[RouterModule]
 })
-export class AppRoutingModuleModule { }
+export class AppRoutingModule { }

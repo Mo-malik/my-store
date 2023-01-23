@@ -3,4 +3,8 @@ export class User{
     address:string;
     card:string
 
+    constructor(){
+        
+    }
+
 }

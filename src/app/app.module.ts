@@ -8,15 +8,13 @@ import { MaterialModule } from './modules/material/material.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductsComponent } from './components/products/products.component';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModuleModule } from './modules/app-routing-module/app-routing-module.module';
+import { AppRoutingModule } from './modules/app-routing-module/app-routing-module';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ProductDetaileComponent } from './components/product-detaile/product-detaile.component';
 import { ShopingcartComponent } from './components/shopingcart/shopingcart.component';
 import { OrderComponent } from './components/order/order.component';
-import { CartItemComponent } from './components/cart-item/cart-item.component';
-
 
 @NgModule({
   declarations: [
@@ -27,16 +25,16 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
     ProductDetaileComponent,
     ShopingcartComponent,
     OrderComponent,
-    CartItemComponent
-   
+
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    AppRoutingModuleModule
- 
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

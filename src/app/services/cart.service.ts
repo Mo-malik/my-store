@@ -80,5 +80,8 @@ export class CartService {
       
     }
   }
-  
+  resetCart(){
+    this.cart.next([])
+    this.count.next(0)
+  }
 }
