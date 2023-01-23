@@ -4,49 +4,39 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule} from '@angular/material/button';
-import { MatListModule} from '@angular/material/list';
-import { MatToolbarModule} from '@angular/material/toolbar';
-import { MatFormFieldModule} from '@angular/material/form-field';
-import { MatInputModule} from '@angular/material/input';
-import { MatTableModule} from '@angular/material/table';
-import { MatCardModule} from '@angular/material/card';
-import { FlexLayoutModule} from '@angular/flex-layout';
-import { LoginComponent } from './components/login/login.component';
-
-import { ReactiveFormsModule,FormsModule } from '@angular/forms';
-
-import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModuleModule } from './app-routing-module/app-routing-module.module';
+import { MaterialModule } from './modules/material/material.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductsComponent } from './components/products/products.component';
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { OffersComponent } from './components/offers/offers.component';
+
+import {HttpClientModule} from '@angular/common/http';
+
+import { AppRoutingModuleModule } from './modules/app-routing-module/app-routing-module.module';
+import { ProductItemComponent } from './components/product-item/product-item.component';
+import { ProductDetaileComponent } from './components/product-detaile/product-detaile.component';
+import { ShopingcartComponent } from './components/shopingcart/shopingcart.component';
+import { OrderComponent } from './components/order/order.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+    NavbarComponent,
     ProductsComponent,
-    ProductDetailsComponent,
-    ToolbarComponent,
-    OffersComponent
+    ProductItemComponent,
+    ProductDetaileComponent,
+    ShopingcartComponent,
+    OrderComponent,
+    CartItemComponent
+   
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    FormsModule,
+    MaterialModule,
     HttpClientModule,
-    FlexLayoutModule,
-    AppRoutingModuleModule,
-    MatToolbarModule,
-    MatListModule,
-    MatTableModule
+    AppRoutingModuleModule
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

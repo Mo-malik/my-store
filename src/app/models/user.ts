@@ -1,10 +1,6 @@
 export class User{
-    
     username:string;
-    password:string;
+    address:string;
+    card:string
 
-    constructor(username:string,password:string){
-        this.username=username;
-        this.password=password;
-    }
 }
